@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="TSLogo.png" type="image/png">
+    <title>Top Salão - O salão que você precisa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .navbar {
+            background-color: transparent;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: background-color 0.3s;
+        }
+
+        .navbar img {
+            vertical-align: middle;
+            margin-right: 10px; /* Ajuste para dispositivos móveis */
+        }
+
+        .navbar a {
+            color: white;
+            padding: 10px 15px; /* Reduzir o espaçamento para telas menores */
+            text-decoration: none;
+            display: inline-block;
+            font-weight: bold;
+        }
+
+        .navbar a:hover {
+            color: #77AE12;
+            font-weight: bold;
+        }
+
+        .gif-container {
+            width: 100%;
+            height: 100vh;
+            background: url('barbearia.gif') no-repeat center center;
+            background-size: cover;
+        }
+
+        .content {
+            padding: 20px;
+            background-color: #333;
+            color: white;
+        }
+
+        .content1 {
+            padding: 20px;
+            background-color: white;
+            color: #77AE12;
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Media Query para dispositivos com largura máxima de 768px (tablets e smartphones) */
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 10px; /* Reduzir o espaçamento do navbar */
+            }
+
+            .navbar img {
+                width: 120px; /* Redimensionar o logo para telas menores */
+                height: auto;
+            }
+
+            .navbar a {
+                padding: 8px 12px; /* Ajustar o espaçamento dos links no menu */
+            }
+
+            .content,
+            .content1 {
+                padding: 15px; /* Ajustar o espaçamento geral */
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <div class="navbar" id="navbar">
+        <img src="TopSalao.png" alt="logo" width="180" height="55">
+        <a href="#home">Salão</a>
+        <a href="#about">Sobre Nós</a>
+        <a href="#contact">Contato</a>
+        <a href="https://topsalao.com/app/index.html">Agendamento</a>
+    </div>
+
+    <div class="gif-container" id="home"></div>
+
+    <div class="content" id="about">
+        <h1>Sobre nós</h1>
+        <p>A Top Salão é uma barbearia renomada localizada na cidade de Pitangueiras. Nosso endereço é rua Joaquim De Souza, número 227, Bairro São João, próximo ao posto São João. Estamos dedicados a proporcionar serviços de alta qualidade em um ambiente acolhedor e profissional. Venha nos visitar e aproveite para conhecer tudo o que podemos oferecer para o seu bem-estar e estilo.</p>
+    </div>
+    <div class="content1" id="contact">
+        <h1>Contato</h1>
+        <p>Caso necessite de esclarecimentos adicionais ou tenha dúvidas, estamos à disposição para ajudar. Você pode entrar em contato conosco através do telefone +55 16 99381-8223. Estamos disponíveis para responder a todas as suas perguntas e fornecer o suporte necessário. Não hesite em nos chamar, ficaremos felizes em ajudar.</p>
+    </div>
+    <div class="content" id="about">
+        <img src="TopSalao.png" alt="logo" width="180" height="55">
+        <p>Todos os direitos reservados - Copyright © 2024</p>
+    </div>
+    <script>
+        window.addEventListener('scroll', function() {
+            var navbar = document.getElementById('navbar');
+            if (window.scrollY > 0) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
